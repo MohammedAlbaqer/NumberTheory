@@ -1,5 +1,6 @@
 
 import time
+## this function test wither the number is prime or not
 def is_prime(n):
   if n == 2 or n == 3: return True
   if n < 2 or n%2 == 0: return False
@@ -12,6 +13,7 @@ def is_prime(n):
     if n%(f+2) == 0: return False
     f +=6
   return True
+## this function to finde prime factors for the number
 def fac(n):
 	a = []
 	for i in range(1,n+1):
@@ -30,4 +32,6 @@ def phi(n):
 	for i in a:
 		m*=(pow(i[0],i[1])-pow(i[0],i[1]-1))
 	return m
-print(is_prime(100003670912119))
+star = time.time()
+print(phi(100003670912119))
+print(star - time.time())
