@@ -32,6 +32,11 @@ def phi(n):
 	for i in a:
 		m*=(pow(i[0],i[1])-pow(i[0],i[1]-1))
 	return m
-star = time.time()
-print(phi(100003670912119))
-print(star - time.time())
+
+def sfac(n):
+	a = ''
+	for i,j in fac(n):
+		print(i,j)
+		a += '({}^{})'.format(i,j)
+		a += '*'
+	return a[0:-1]
